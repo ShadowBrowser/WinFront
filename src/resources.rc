@@ -1,0 +1,34 @@
+#include "resource.h"
+#include "Version.h"
+
+#include "Windows.h"
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SHADOWBROWSER       ICON                    "ShadowBrowser.ico"
+
+1 VERSIONINFO
+FILEVERSION RC_SHADOWBROWSER_VERSION
+PRODUCTVERSION RC_SHADOWBROWSER_VERSION
+FILETYPE VFT_APP
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904E4"
+        {
+            VALUE "CompanyName", "77Z"
+            VALUE "FileVersion", SHADOWBROWSER_VERSION
+            VALUE "FileDescription", "Shadow Browser"
+            VALUE "InternalName", "SHADOW"
+            VALUE "LegalCopyright", "Copyright (c) 77Z 2021"
+            VALUE "LegalTrademarks", "77Z"
+            VALUE "OriginalFilename", "ShadowBrowser.exe"
+            VALUE "ProductName", "Shadow Engine"
+            VALUE "ProductVersion", SHADOWBROWSER_VERSION
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0409, 1252
+    }
+}
