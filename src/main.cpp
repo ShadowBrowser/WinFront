@@ -9,13 +9,22 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
                 hwnd, (HMENU) NULL, NULL, NULL);
             
             //Convert String to Char Array
-            std::string coreverstring = coreVersion();
+            /* std::string coreverstring = coreVersion();
             int coreverlength = coreverstring.length();
             char coreVerArr[coreverlength + 1];
-            strcpy(coreVerArr, coreverstring.c_str());
-            CreateWindow("STATIC", coreVerArr,
+            strcpy(coreVerArr, coreverstring.c_str()); */
+            CreateWindow("STATIC", StringToCharArr(coreVersion()),
                 WS_VISIBLE | WS_CHILD,
                 250, 5, 320, 20,
+                hwnd, (HMENU) NULL, NULL, NULL);
+
+            std::stringstream intConverter;
+            intConverter << RandomNumber(252356);
+            char const *int_as_char = intConverter.str().c_str();
+
+            CreateWindow("STATIC", int_as_char,
+                WS_VISIBLE | WS_CHILD,
+                20, 100, 320, 20,
                 hwnd, (HMENU) NULL, NULL, NULL);
 
             break;
