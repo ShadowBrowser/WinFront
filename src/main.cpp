@@ -64,8 +64,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
     wc.hbrBackground = (HBRUSH)(COLOR_WINDOWTEXT+1);
     wc.lpszClassName = "WindowClass";
-    wc.hIcon         = LoadIcon(NULL, IDI_APPLICATION/* MAKEINTRESOURCEW(IDI_SHADOWBROWSER) */);
-    wc.hIconSm       = LoadIcon(NULL, IDI_APPLICATION/* MAKEINTRESOURCEW(IDI_SHADOWBROWSER) */);
+    wc.hIcon         = LoadIcon(NULL, IDI_APPLICATION /* MAKEINTRESOURCEW(IDI_SHADOWBROWSER)*/);
+    wc.hIconSm       = LoadIcon(NULL, IDI_APPLICATION /* MAKEINTRESOURCEW(IDI_SHADOWBROWSER)*/);
 
     if (!RegisterClassEx(&wc)) {
         MessageBox(NULL, "Something went wrong when trying to create the window. err 0", "ShadowBrowser ERROR", MB_ICONEXCLAMATION | MB_OK);
